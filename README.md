@@ -1,1 +1,1 @@
-ContactKeeper
+ContactKeeper is MERN application
