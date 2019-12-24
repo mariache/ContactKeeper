@@ -41,14 +41,14 @@ const ContactForm = () => {
         value="personal"
         checked={type === "personal"}
       />
-      Personal{""}
+      Personal
       <input
         type="radio"
         name="type"
         value="professional"
         checked={type === "professional"}
       />
-      Professional{""}
+      Professional
     </h5>
     <div>
       <input

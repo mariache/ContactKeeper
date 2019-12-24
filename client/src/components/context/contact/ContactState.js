@@ -29,6 +29,13 @@ const ContactState = props => {
         email: "omarbagaev@gmail.com",
         phone: "456 66 132505",
         type: "professional"
+      },
+      {
+        id: 23,
+        name: "Sami Omari",
+        email: "slvmlnkv@gmail.com",
+        phone: "+76 66 132505",
+        type: "professional"
       }
     ]
   };

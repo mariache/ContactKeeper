@@ -6,7 +6,7 @@ const ContactItem = ({ contact }) => {
   return (
     <div className="bg-light card">
       <h3 className="text-primary text-left">
-        {name}{" "}
+        {name}
         <span
           style={{ float: "right" }}
           className={
