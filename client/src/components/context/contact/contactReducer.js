@@ -3,7 +3,7 @@ import {
   DELETE_CONTACT,
   SET_CURRENT,
   CLEAR_CURRENT,
-  //   UPDATE_CONTACT,
+  UPDATE_CONTACT,
   //   FILTER_CONTACTS,
   //   CLEAR_CONTACTS,
   //   CLEAR_FILTER,
@@ -32,6 +32,13 @@ export default (state, action) => {
       return {
         ...state,
         current: null,
+      };
+    case UPDATE_CONTACT:
+      return {
+        ...state,
+        contacts: state.contacts.map((contact) =>
+          contact.id === action.payload.id ? action.payload : contact
+        ),
       };
     default:
       return state;

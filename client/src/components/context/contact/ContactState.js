@@ -5,10 +5,9 @@ import contactReducer from "./contactReducer";
 import {
   ADD_CONTACT,
   DELETE_CONTACT,
-  // DELETE_CONTACT,
   SET_CURRENT,
   CLEAR_CURRENT,
-  // UPDATE_CONTACT,
+  UPDATE_CONTACT,
   // FILTER_CONTACTS,
   // CLEAR_CONTACTS,
   // CLEAR_FILTER,
@@ -60,9 +59,9 @@ const ContactState = (props) => {
     dispatch({ type: CLEAR_CURRENT });
   };
 
-  //Clear Current contact
-
-  //Update contact
+  const updateContact = (contact) => {
+    dispatch({ type: UPDATE_CONTACT, payload: contact });
+  };
 
   //Filter contatc
 
@@ -77,6 +76,7 @@ const ContactState = (props) => {
         deleteContact,
         setCurrent,
         clearCurrent,
+        updateContact,
       }}
     >
       {props.children}
