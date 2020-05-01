@@ -6,6 +6,7 @@ import {
   UPDATE_CONTACT,
   FILTER_CONTACTS,
   CLEAR_FILTER,
+  CONTACT_ERROR,
   //   CLEAR_CONTACTS,
 } from "../types";
 
@@ -52,6 +53,11 @@ export default (state, action) => {
           const regex = new RegExp(`${action.payload}`, "gi");
           return contact.name.match(regex) || contact.email.match(regex);
         }),
+      };
+    case CONTACT_ERROR:
+      return {
+        ...state,
+        error: action.payload,
       };
     default:
       return state;
