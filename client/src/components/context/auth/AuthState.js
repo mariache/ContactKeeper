@@ -11,7 +11,6 @@ import {
   LOGIN_FAIL,
   LOGOUT,
   CLEAR_ERRORS,
-  CLEAR_CURRENT,
 } from "../types";
 import setAuthToken from "../../../utils/setAuthToken";
 
@@ -43,7 +42,6 @@ const AuthState = (props) => {
     }
   };
 
-  // Register User
   const register = async (formData) => {
     const config = {
       headers: {
