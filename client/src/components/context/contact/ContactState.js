@@ -33,9 +33,15 @@ const ContactState = (props) => {
 
     try {
       const res = await axios.get("/api/contacts");
-      dispatch({ type: GET_CONTACTS, payload: res.data });
+      dispatch({
+        type: GET_CONTACTS,
+        payload: res.data,
+      });
     } catch (e) {
-      dispatch({ tyoe: CONTACT_ERROR, payload: e.response.msg });
+      dispatch({
+        type: CONTACT_ERROR,
+        payload: e.response.msg,
+      });
     }
   };
 
@@ -48,9 +54,15 @@ const ContactState = (props) => {
 
     try {
       const res = await axios.post("/api/contacts", contact, config);
-      dispatch({ type: ADD_CONTACT, payload: res.data });
+      dispatch({
+        type: ADD_CONTACT,
+        payload: res.data,
+      });
     } catch (e) {
-      dispatch({ type: CONTACT_ERROR, payload: e.response.msg });
+      dispatch({
+        type: CONTACT_ERROR,
+        payload: e.response.msg,
+      });
     }
   };
 
@@ -58,12 +70,26 @@ const ContactState = (props) => {
     dispatch({ type: CLEAR_CONTACTS });
   };
 
-  const deleteContact = (id) => {
-    dispatch({ type: DELETE_CONTACT, payload: id });
+  const deleteContact = async (id) => {
+    try {
+      await axios.delete(`/api/contacts/${id}`);
+      dispatch({
+        type: DELETE_CONTACT,
+        payload: id,
+      });
+    } catch (e) {
+      dispatch({
+        type: CONTACT_ERROR,
+        payload: e.response.msg,
+      });
+    }
   };
 
   const setCurrent = (contact) => {
-    dispatch({ type: SET_CURRENT, payload: contact });
+    dispatch({
+      type: SET_CURRENT,
+      payload: contact,
+    });
   };
 
   const clearCurrent = () => {
@@ -71,7 +97,10 @@ const ContactState = (props) => {
   };
 
   const updateContact = (contact) => {
-    dispatch({ type: UPDATE_CONTACT, payload: contact });
+    dispatch({
+      type: UPDATE_CONTACT,
+      payload: contact,
+    });
   };
 
   const clearFilter = () => {
@@ -79,7 +108,10 @@ const ContactState = (props) => {
   };
 
   const filterContacts = (text) => {
-    dispatch({ type: FILTER_CONTACTS, payload: text });
+    dispatch({
+      type: FILTER_CONTACTS,
+      payload: text,
+    });
   };
 
   return (
