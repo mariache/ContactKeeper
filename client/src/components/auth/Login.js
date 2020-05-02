@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import AlertContext from "./../context/alert/alertContext";
 import AuthContext from "./../context/auth/authContext";
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
   const alertContext = useContext(AlertContext);
@@ -47,6 +48,7 @@ const Login = (props) => {
       <h1>
         Account <span className="text-primary">Login</span>
       </h1>
+      <p>Please, login into your account</p>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email </label>
@@ -73,6 +75,16 @@ const Login = (props) => {
           value="Login"
           className="btn btn-primary btn-block"
         />
+        <div
+          className="flex-container"
+          style={{
+            padding: "0.4rem 1.3rem",
+          }}
+        >
+          <Link to="/register" className="secondary-color">
+            Register
+          </Link>
+        </div>
       </form>
     </div>
   );
