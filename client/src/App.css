@@ -103,6 +103,14 @@ img {
     padding: 1rem;
     border: #ccc 1px dotted;
     margin: 0.7rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
+    background-color: #fff;
 }
 
 /* List */
@@ -354,6 +362,22 @@ textarea {
 input[type='submit'],
 button {
     font: inherit;
+}
+
+.radio-wrapper {
+    display: flex;
+}
+
+.radio-wrapper>div {
+    width: 120px;
+}
+
+.radio-wrapper input[type='radio'] {
+    margin: 0 0.5rem 0 0;
+}
+
+.form-add-input {
+    margin: 0 0 0.7rem 0;
 }
 
 .form-group {

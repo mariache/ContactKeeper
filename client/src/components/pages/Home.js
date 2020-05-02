@@ -13,15 +13,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="grid-2">
-      <div>
-        <ContactForm />
+    <>
+      <h2 className="text-primary">List of contacts</h2>
+      <div className="grid-2">
+        <div>
+          <ContactFilter />
+          <Contacts />
+        </div>
+        <div>
+          <ContactForm />
+        </div>
       </div>
-      <div>
-        <ContactFilter />
-        <Contacts />
-      </div>
-    </div>
+    </>
   );
 };
 
