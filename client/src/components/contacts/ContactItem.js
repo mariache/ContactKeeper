@@ -13,7 +13,7 @@ const ContactItem = ({ contact }) => {
     clearCurrent();
   };
   return (
-    <div className="bg-light card">
+    <div className=" card">
       <h3 className="text-primary text-left">
         {name}
         <span
