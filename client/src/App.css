@@ -3,10 +3,12 @@
 /* Global Styles */
 :root {
     --primary-color: #003699;
+    --secondary-color: #adadad;
     --dark-color: #333333;
     --light-color: #f4f4f4;
     --danger-color: #dc3545;
     --success-color: #28a745;
+    --background-color: #f2f2f2;
 }
 
 * {
@@ -19,7 +21,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    background-color: #fff;
+    background-color: var(--background-color);
     color: #333;
 }
 
@@ -46,6 +48,12 @@ img {
     margin: auto;
     overflow: hidden;
     padding: 0 2rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Text Styles*/
@@ -255,6 +263,7 @@ img {
 .alert-primary {
     background: var(--primary-color);
     color: #fff;
+    border-radius: 4px;
 }
 
 .btn-light,
@@ -312,8 +321,14 @@ img {
 }
 
 /* Forms */
+label,
+.secondary-color {
+    color: var(--secondary-color)
+}
+
 input {
     margin: 1.2rem 0;
+    border-radius: 4px;
 }
 
 .form-text {
@@ -353,12 +368,20 @@ button {
     max-width: 500px;
     margin: 2rem auto;
     overflow: hidden;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04204);
+    border-radius: 3px;
 }
 
 .form-container h1,
 h2,
 h3 {
+    text-align: center;
+}
+
+.form-container h1+p {
+    color: var(--secondary-color);
     text-align: center;
 }
 

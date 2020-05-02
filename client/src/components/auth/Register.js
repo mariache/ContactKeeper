@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import AlertContext from "./../context/alert/alertContext";
 import AuthContext from "./../context/auth/authContext";
+import { Link } from "react-router-dom";
 
 const Register = (props) => {
   const alertContext = useContext(AlertContext);
@@ -48,6 +49,7 @@ const Register = (props) => {
       <h1>
         Account <span className="text-primary">Register</span>
       </h1>
+      <p>Please, fill the form to create an account</p>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -80,6 +82,16 @@ const Register = (props) => {
           value="Register"
           className="btn btn-primary btn-block"
         />
+        <div
+          className="flex-container"
+          style={{
+            padding: "0.4rem 1.3rem",
+          }}
+        >
+          <Link to="/login" className="secondary-color">
+            Login
+          </Link>
+        </div>
       </form>
     </div>
   );
