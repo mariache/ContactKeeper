@@ -1,6 +1,6 @@
 # Contact Keeper
 
-> Full stack MERN contact manager with React hooks, context & JWT authentication. Part of my React course on Udemy.
+> Full stack MERN application for managing contacts with React hooks, CONTEXT API & JWT authentication.
 
 ## Usage
 
