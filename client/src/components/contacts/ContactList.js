@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import ContactContext from "../../components/context/contact/contactContext";
+import ContactContext from "../context/contact/contactContext";
 import ContactItem from "./ContactItem";
 import Spinner from "../layout/Spinner";
 
-const Contacts = () => {
+const ContactList = () => {
   const contactContext = useContext(ContactContext);
   const { contacts, filtered, getContacts, loading } = contactContext;
 
@@ -48,4 +48,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactList;
