@@ -25,8 +25,10 @@ npm run client  # runs React Client Only on :3000
 
 ## Built With
 
+- [MongoDBAtlas](https://docs.atlas.mongodb.com/) - MongoDB Atlas is a fully-managed cloud database
 - [React](https://reactjs.org/docs/getting-started.html) - The JS library used
-- [ContextAPI](https://reactjs.org/docs/context.html) - Allows to manage global application states
+- [Express](https://expressjs.com/en/starter/installing.html) - Fast, unopinionated, minimalist web framework for Node.js
+- [Node](https://nodejs.org/en/) - Node.js® is a JavaScript runtime built
 
 ## Contributing
 
