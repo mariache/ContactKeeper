@@ -1,6 +1,6 @@
 # Contact Keeper
 
-> Full stack MERN application for managing contacts with React hooks, CONTEXT API & JWT authentication.
+Full stack MERN application for managing contacts with React hooks, CONTEXT API & JWT authentication.
 
 ## Usage
 
@@ -18,7 +18,7 @@ Edit your /config/default.json file to include the correct MongoDB URI
 ### Run Server
 
 ```bash
-npm run dev     # Express & React :3000 & :5000
-npm run server  # Express API Only :5000
-npm run client  # React Client Only :3000
+npm run dev     # runs concurrently Express on :5000 & React on :5000
+npm run server  # runs Express API Only on :5000
+npm run client  # runs React Client Only on :3000
 ```
