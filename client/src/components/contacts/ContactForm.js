@@ -75,7 +75,7 @@ const ContactForm = () => {
         Phone
         <input
           className="form-add-input"
-          type="phone"
+          type="tel"
           name="phone"
           value={phone}
           onChange={onChange}
