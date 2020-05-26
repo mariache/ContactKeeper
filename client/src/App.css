@@ -238,6 +238,10 @@ img {
   border-radius: 4px;
 }
 
+.btn[type="submit"] {
+  margin-bottom: 0.5rem;
+}
+
 .btn-link {
   background: none;
   padding: 0;
@@ -377,6 +381,7 @@ button {
 
 .radio-wrapper > div {
   width: 120px;
+  margin-bottom: 0.5rem;
 }
 
 .radio-wrapper input[type="radio"] {

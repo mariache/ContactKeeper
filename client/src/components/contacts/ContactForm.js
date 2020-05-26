@@ -48,9 +48,9 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={onSubmit} className="card">
-      <h2 className="text-primary">
+      <h3 className="title-secondary">
         {current ? "Edit contact" : "Add contact"}
-      </h2>
+      </h3>
       <label>
         Name
         <input
@@ -84,24 +84,32 @@ const ContactForm = () => {
       <h5>Contact Type</h5>
       <div className="radio-wrapper">
         <div>
-          <input
-            type="radio"
-            name="type"
-            value="personal"
-            checked={type === "personal"}
-            onChange={onChange}
-          />
-          Personal
-        </div>
-        <div>
-          <input
-            type="radio"
-            name="type"
-            value="professional"
-            checked={type === "professional"}
-            onChange={onChange}
-          />
-          Professional
+          <p>
+            <label>
+              <input
+                class="with-gap"
+                name="type"
+                type="radio"
+                value="personal"
+                checked={type === "personal"}
+                onChange={onChange}
+              />
+              <span>Personal</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input
+                class="with-gap"
+                name="type"
+                type="radio"
+                value="professional"
+                checked={type === "professional"}
+                onChange={onChange}
+              />
+              <span>Professional</span>
+            </label>
+          </p>
         </div>
       </div>
       <div>
@@ -113,7 +121,7 @@ const ContactForm = () => {
       </div>
       {current && (
         <div>
-          <button className="btn btn-light btn-block" onClick={clearAll}>
+          <button className="btn btn-light btn-block grey" onClick={clearAll}>
             Clear
           </button>
         </div>
