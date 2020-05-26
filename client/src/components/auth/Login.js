@@ -45,10 +45,10 @@ const Login = (props) => {
 
   return (
     <div className="form-container">
-      <h1>
-        Account <span className="text-primary">Login</span>
-      </h1>
-      <p>Please, login into your account</p>
+      <h3 className="title-secondary ">
+        Account <span className="form-container__title form-title">Login</span>
+      </h3>
+      <p className="text-center">Please, login into your account</p>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email </label>
