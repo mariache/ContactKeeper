@@ -15,7 +15,7 @@ const ContactItem = ({ contact }) => {
   return (
     <div className="card" style={{ position: "relative" }}>
       <span
-        style={{ position: "absolute", top: 1, right: 0 }}
+        style={{ position: "absolute", top: 0, right: 0 }}
         className={
           "badge " +
           (type === "professional" ? "badge-success" : "badge-primary")
@@ -39,13 +39,12 @@ const ContactItem = ({ contact }) => {
         )}
       </ul>
       <p>
-        <button
-          className="btn btn-dark btn-sm"
-          onClick={() => setCurrent(contact)}
-        >
+        <button className="btn " onClick={() => setCurrent(contact)}>
+          <i class="material-icons right">edit</i>
           Edit
         </button>
-        <button className="btn btn-danger btn-sm red" onClick={onDelete}>
+        <button className="btn red" onClick={onDelete}>
+          <i class="material-icons right">delete</i>
           Delete
         </button>
       </p>

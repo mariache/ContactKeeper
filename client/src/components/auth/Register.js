@@ -78,11 +78,7 @@ const Register = (props) => {
             onChange={onChange}
           />
         </div>
-        <input
-          type="submit"
-          value="Register"
-          className="btn btn-primary btn-block"
-        />
+        <input type="submit" value="Register" className="btn  btn-block" />
         <div
           className="flex-container"
           style={{

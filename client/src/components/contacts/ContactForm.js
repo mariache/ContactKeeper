@@ -116,12 +116,12 @@ const ContactForm = () => {
         <input
           type="submit"
           value={current ? "Update Contact" : "Add contact"}
-          className="btn btn-primary btn-block"
+          className="btn btn-block"
         />
       </div>
       {current && (
         <div>
-          <button className="btn btn-light btn-block grey" onClick={clearAll}>
+          <button className="btn  btn-block grey" onClick={clearAll}>
             Clear
           </button>
         </div>

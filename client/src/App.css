@@ -253,12 +253,6 @@ img {
   width: 100%;
 }
 
-.btn-sm {
-  font-size: 0.8rem;
-  padding: 0.3rem 1rem;
-  margin-right: 0.2rem;
-}
-
 .badge {
   font-size: 0.8rem;
   padding: 0.2rem 0.7rem;
@@ -276,7 +270,6 @@ img {
   color: #333;
 }
 
-.btn-primary,
 .bg-primary,
 .badge-primary,
 .alert-primary {
@@ -285,7 +278,6 @@ img {
   border-radius: 4px;
 }
 
-.btn-light,
 .bg-light,
 .badge-light,
 .alert-light {
@@ -293,7 +285,6 @@ img {
   color: #333;
 }
 
-.btn-dark,
 .bg-dark,
 .badge-dark,
 .alert-dark {
@@ -301,7 +292,6 @@ img {
   color: #fff;
 }
 
-.btn-danger,
 .bg-danger,
 .badge-danger,
 .alert-danger {

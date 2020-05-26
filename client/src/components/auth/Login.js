@@ -70,11 +70,7 @@ const Login = (props) => {
             required
           />
         </div>
-        <input
-          type="submit"
-          value="Login"
-          className="btn btn-primary btn-block"
-        />
+        <input type="submit" value="Login" className="btn btn-block" />
         <div
           className="flex-container"
           style={{
