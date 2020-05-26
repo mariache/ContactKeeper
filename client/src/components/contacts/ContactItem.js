@@ -13,19 +13,17 @@ const ContactItem = ({ contact }) => {
     clearCurrent();
   };
   return (
-    <div className=" card">
-      <h4 className=" text-left">
-        {name}
-        <span
-          style={{ float: "right" }}
-          className={
-            "badge " +
-            (type === "professional" ? "badge-success" : "badge-primary")
-          }
-        >
-          {type.charAt(0).toUpperCase() + type.slice(1)}
-        </span>
-      </h4>
+    <div className="card" style={{ position: "relative" }}>
+      <span
+        style={{ position: "absolute", top: 1, right: 0 }}
+        className={
+          "badge " +
+          (type === "professional" ? "badge-success" : "badge-primary")
+        }
+      >
+        {type.charAt(0).toUpperCase() + type.slice(1)}
+      </span>
+      <h4 className=" text-left">{name}</h4>
       <ul className="list">
         {email && (
           <li>
