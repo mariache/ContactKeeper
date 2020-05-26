@@ -260,8 +260,7 @@ img {
   padding: 0.2rem 0.7rem;
   text-align: center;
   margin: 0.3rem;
-  background: var(--light-color);
-  color: #333;
+  color: var(--light-color) !important;
   border-radius: 5px;
 }
 

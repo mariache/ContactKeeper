@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <>
-      <h2 className="text-primary">List of contacts</h2>
+      <h3>List of contacts</h3>
       <div className="grid-2">
         <div>
           <ContactFilter />

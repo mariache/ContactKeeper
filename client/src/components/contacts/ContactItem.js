@@ -14,7 +14,7 @@ const ContactItem = ({ contact }) => {
   };
   return (
     <div className=" card">
-      <h3 className="text-primary text-left">
+      <h4 className=" text-left">
         {name}
         <span
           style={{ float: "right" }}
@@ -25,7 +25,7 @@ const ContactItem = ({ contact }) => {
         >
           {type.charAt(0).toUpperCase() + type.slice(1)}
         </span>
-      </h3>
+      </h4>
       <ul className="list">
         {email && (
           <li>
