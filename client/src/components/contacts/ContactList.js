@@ -20,7 +20,7 @@ const ContactList = () => {
   return (
     <>
       {contacts !== null && !loading ? (
-        <TransitionGroup>
+        <TransitionGroup className="card-wrapper">
           {filtered !== null
             ? filtered.map((contact) => (
                 <CSSTransition
