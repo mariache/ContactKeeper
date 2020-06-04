@@ -2,7 +2,7 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #003699;
+  --primary-color: #0d404e;
   --secondary-color: #adadad;
   --dark-color: #333333;
   --light-color: #f4f4f4;
@@ -206,31 +206,6 @@ img {
   gap: 1rem;
 }
 
-/* Grid */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-  gap: 1rem;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-}
-
-.grid-2-3 {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-gap: 2rem;
-}
-
 .btn {
   display: inline-block;
   background: var(--light-color);
@@ -278,11 +253,14 @@ img {
 }
 
 .bg-primary,
-.badge-primary,
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
   border-radius: 4px;
+}
+
+.badge-primary {
+  background: #1976D2;
 }
 
 .bg-light,
@@ -541,14 +519,6 @@ table th {
 
   .container {
     width: 100% !important;
-  }
-
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    gap: 1rem;
   }
 
   /* Text Styles */
