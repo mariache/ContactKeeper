@@ -47,86 +47,88 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="card">
-      <h3 className="title-secondary">
-        {current ? "Edit contact" : "Add contact"}
-      </h3>
-      <label>
-        Name
-        <input
-          className="form-add-input"
-          type="text"
-          name="name"
-          value={name}
-          onChange={onChange}
-        />
-      </label>
-      <label>
-        Email
-        <input
-          className="form-add-input"
-          type="email"
-          name="email"
-          value={email}
-          onChange={onChange}
-        />
-      </label>
-      <label>
-        Phone
-        <input
-          className="form-add-input"
-          type="tel"
-          name="phone"
-          value={phone}
-          onChange={onChange}
-        />
-      </label>
-      <h5>Contact Type</h5>
-      <div className="radio-wrapper">
-        <div>
-          <p>
-            <label>
-              <input
-                class="with-gap"
-                name="type"
-                type="radio"
-                value="personal"
-                checked={type === "personal"}
-                onChange={onChange}
-              />
-              <span>Personal</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input
-                class="with-gap"
-                name="type"
-                type="radio"
-                value="professional"
-                checked={type === "professional"}
-                onChange={onChange}
-              />
-              <span>Professional</span>
-            </label>
-          </p>
+    <div id="form-modal" className="modal">
+      <form onSubmit={onSubmit} className="card" style={{ margin: 0 }}>
+        <h3 className="title-secondary">
+          {current ? "Edit contact" : "Add contact"}
+        </h3>
+        <label>
+          Name
+          <input
+            className="form-add-input"
+            type="text"
+            name="name"
+            value={name}
+            onChange={onChange}
+          />
+        </label>
+        <label>
+          Email
+          <input
+            className="form-add-input"
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+          />
+        </label>
+        <label>
+          Phone
+          <input
+            className="form-add-input"
+            type="tel"
+            name="phone"
+            value={phone}
+            onChange={onChange}
+          />
+        </label>
+        <h5>Contact Type</h5>
+        <div className="radio-wrapper">
+          <div>
+            <p>
+              <label>
+                <input
+                  class="with-gap"
+                  name="type"
+                  type="radio"
+                  value="personal"
+                  checked={type === "personal"}
+                  onChange={onChange}
+                />
+                <span>Personal</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input
+                  class="with-gap"
+                  name="type"
+                  type="radio"
+                  value="professional"
+                  checked={type === "professional"}
+                  onChange={onChange}
+                />
+                <span>Professional</span>
+              </label>
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <input
-          type="submit"
-          value={current ? "Update Contact" : "Add contact"}
-          className="btn btn-block"
-        />
-      </div>
-      {current && (
         <div>
-          <button className="btn  btn-block grey" onClick={clearAll}>
-            Clear
-          </button>
+          <input
+            type="submit"
+            value={current ? "Update Contact" : "Add contact"}
+            className="btn btn-block"
+          />
         </div>
-      )}
-    </form>
+        {current && (
+          <div>
+            <button className="btn  btn-block grey" onClick={clearAll}>
+              Clear
+            </button>
+          </div>
+        )}
+      </form>
+    </div>
   );
 };
 
