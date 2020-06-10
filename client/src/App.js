@@ -16,6 +16,7 @@ import setAuthToken from "./utils/setAuthToken";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import AddBtn from "./components/pages/AddBtn";
 import ContactForm from "./components/contacts/ContactForm";
+import EditContactModal from "./components/contacts/EditContactModal";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -37,6 +38,7 @@ const App = () => {
                 <Alerts />
                 <AddBtn />
                 <ContactForm />
+                <EditContactModal />
                 <Switch>
                   <PrivateRoute exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />

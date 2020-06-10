@@ -39,10 +39,14 @@ const ContactItem = ({ contact }) => {
         )}
       </ul>
       <p>
-        <button className="btn " onClick={() => setCurrent(contact)}>
+        <a
+          href="#edit-form-modal"
+          className="btn modal-trigger"
+          onClick={() => setCurrent(contact)}
+        >
           <i class="material-icons right">edit</i>
           Edit
-        </button>
+        </a>
         <button className="btn red" onClick={onDelete}>
           <i class="material-icons right">delete</i>
           Delete
