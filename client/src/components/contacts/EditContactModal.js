@@ -111,7 +111,7 @@ const EditContactModal = () => {
           <input
             type="submit"
             value={"Update Contact"}
-            className="btn btn-block"
+            className="modal-close btn btn-block"
           />
         </div>
       </form>

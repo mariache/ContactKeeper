@@ -1,23 +1,10 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import ContactContext from "./../context/contact/contactContext";
 
 const ContactForm = () => {
   const contactContext = useContext(ContactContext);
 
-  const { current, addContact, clearCurrent, updateContact } = contactContext;
-
-  useEffect(() => {
-    if (current !== null) {
-      setContact(current);
-    } else {
-      setContact({
-        name: "",
-        email: "",
-        phone: "",
-        type: "personal",
-      });
-    }
-  }, [contactContext, current]);
+  const { current, addContact, clearCurrent } = contactContext;
 
   const [contact, setContact] = useState({
     name: "",
@@ -38,20 +25,15 @@ const ContactForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (current === null) {
-      addContact(contact);
-    } else {
-      updateContact(contact);
-    }
+    addContact(contact);
+
     clearAll();
   };
 
   return (
     <div id="form-modal" className="modal">
       <form onSubmit={onSubmit} className="card" style={{ margin: 0 }}>
-        <h3 className="title-secondary">
-          {current ? "Edit contact" : "Add contact"}
-        </h3>
+        <h3 className="title-secondary">Add contact</h3>
         <label>
           Name
           <input
@@ -116,8 +98,8 @@ const ContactForm = () => {
         <div>
           <input
             type="submit"
-            value={current ? "Update Contact" : "Add contact"}
-            className="btn btn-block"
+            value="Add contact"
+            className="modal-close btn btn-block"
           />
         </div>
         {current && (
