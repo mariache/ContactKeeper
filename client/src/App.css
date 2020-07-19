@@ -121,11 +121,11 @@ img {
 }
 
 .card-professional {
-  background-color: rgba(40, 167, 69, 0.1) !important
+  background-color: rgba(183 225 205 / 0.7) !important
 }
 
 .card-personal {
-  background-color: rgb(25, 118, 210, 0.25) !important
+  background-color: rgba(123 170 247 / 0.7) !important
 }
 
 /* List */
@@ -438,7 +438,7 @@ button {
   margin: 2rem auto;
   overflow: hidden;
   padding: 1rem 2rem;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04204);
   border-radius: 3px;
 }
