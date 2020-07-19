@@ -13,7 +13,13 @@ const ContactItem = ({ contact }) => {
     clearCurrent();
   };
   return (
-    <div className="card" style={{ position: "relative" }}>
+    <div
+      className={
+        "card " +
+        (type === "professional" ? "card-professional" : "card-personal")
+      }
+      style={{ position: "relative" }}
+    >
       <span
         style={{ position: "absolute", top: 0, right: 0 }}
         className={
