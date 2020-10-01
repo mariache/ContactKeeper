@@ -1,35 +1,35 @@
 {
-    "name": "contact_keeper",
-    "version": "1.0.0",
-    "description": "Contact Keeper is contact manager app",
-    "main": "server.js",
-    "scripts": {
-        "start": "node server.js",
-        "server": "nodemon server.js",
-        "client": "npm start --prefix client",
-        "clientinstall": "npm install --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-    },
-    "author": "Salam Omarbagaev",
-    "license": "ISC",
-    "dependencies": {
-        "bcryptjs": "^2.4.3",
-        "config": "^3.3.1",
-        "eslint-utils": "^2.1.0",
-        "express": "^4.17.1",
-        "express-validator": "^6.6.0",
-        "jsonwebtoken": "^8.5.1",
-        "lodash.template": "^4.5.0",
-        "materialize-css": "^1.0.0",
-        "mixin-deep": "^2.0.1",
-        "mongoose": "^5.9.20",
-        "react": "^16.13.1",
-        "serialize-javascript": "^4.0.0",
-        "set-value": "^3.0.2"
-    },
-    "devDependencies": {
-        "concurrently": "^5.2.0",
-        "nodemon": "^2.0.4"
-    }
+  "name": "contact_keeper",
+  "version": "1.0.0",
+  "description": "Contact Keeper is contact manager app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Salam Omarbagaev",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.2",
+    "eslint-utils": "^2.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.template": "^4.5.0",
+    "materialize-css": "^1.0.0",
+    "mixin-deep": "^2.0.1",
+    "mongoose": "^5.10.7",
+    "react": "^16.13.1",
+    "serialize-javascript": "^5.0.1",
+    "set-value": "^3.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
 }
