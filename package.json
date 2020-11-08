@@ -23,13 +23,13 @@
     "lodash.template": "^4.5.0",
     "materialize-css": "^1.0.0",
     "mixin-deep": "^2.0.1",
-    "mongoose": "^5.10.7",
-    "react": "^16.13.1",
+    "mongoose": "^5.10.13",
+    "react": "^17.0.1",
     "serialize-javascript": "^5.0.1",
     "set-value": "^3.0.2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.6"
   }
 }
