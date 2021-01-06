@@ -15,15 +15,15 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.3.2",
+    "config": "^3.3.3",
     "eslint-utils": "^2.1.0",
     "express": "^4.17.1",
-    "express-validator": "^6.6.1",
+    "express-validator": "^6.9.2",
     "jsonwebtoken": "^8.5.1",
     "lodash.template": "^4.5.0",
     "materialize-css": "^1.0.0",
     "mixin-deep": "^2.0.1",
-    "mongoose": "^5.10.13",
+    "mongoose": "^5.11.10",
     "react": "^17.0.1",
     "serialize-javascript": "^5.0.1",
     "set-value": "^3.0.2"
