@@ -15,21 +15,21 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.3.3",
+    "config": "^3.3.6",
     "eslint-utils": "^2.1.0",
     "express": "^4.17.1",
-    "express-validator": "^6.9.2",
+    "express-validator": "^6.10.0",
     "jsonwebtoken": "^8.5.1",
     "lodash.template": "^4.5.0",
     "materialize-css": "^1.0.0",
     "mixin-deep": "^2.0.1",
-    "mongoose": "^5.11.10",
-    "react": "^17.0.1",
+    "mongoose": "^5.12.2",
+    "react": "^17.0.2",
     "serialize-javascript": "^5.0.1",
     "set-value": "^3.0.2"
   },
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.6"
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
   }
 }
