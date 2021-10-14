@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import ContactContext from "./../context/contact/contactContext";
+import {ContactLabels} from "./ContactLabels"
 
 const EditContactModal = () => {
   const contactContext = useContext(ContactContext);
@@ -47,7 +48,7 @@ const EditContactModal = () => {
       <form onSubmit={onSubmit} className="card" style={{ margin: 0 }}>
         <h3 className="title-secondary">Edit contact</h3>
         <label>
-          Name
+          {ContactLabels.name}
           <input
             className="form-add-input"
             type="text"
@@ -67,7 +68,7 @@ const EditContactModal = () => {
           />
         </label>
         <label>
-          Phone
+          {ContactLabels.phone}
           <input
             className="form-add-input"
             type="tel"
@@ -76,7 +77,7 @@ const EditContactModal = () => {
             onChange={onChange}
           />
         </label>
-        <h5>Contact Type</h5>
+        <h5>{ContactLabels.contactType}</h5>
         <div className="radio-wrapper">
           <div>
             <p>
@@ -89,7 +90,7 @@ const EditContactModal = () => {
                   checked={type === "personal"}
                   onChange={onChange}
                 />
-                <span>Personal</span>
+                <span>{ContactLabels.personal}</span>
               </label>
             </p>
             <p>
@@ -102,7 +103,7 @@ const EditContactModal = () => {
                   checked={type === "professional"}
                   onChange={onChange}
                 />
-                <span>Professional</span>
+                <span>{ContactLabels.professional}</span>
               </label>
             </p>
           </div>

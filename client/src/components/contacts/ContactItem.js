@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ContactContext from "./../context/contact/contactContext";
 import PropTypes from "prop-types";
+import {ContactLabels} from "./ContactLabels"
 
 const ContactItem = ({ contact }) => {
   const contactContext = useContext(ContactContext);
@@ -51,11 +52,11 @@ const ContactItem = ({ contact }) => {
           onClick={() => setCurrent(contact)}
         >
           <i class="material-icons right">edit</i>
-          Edit
+            {ContactLabels.edit}
         </a>
         <button className="btn red" onClick={onDelete}>
           <i class="material-icons right">delete</i>
-          Delete
+            {ContactLabels.delete}
         </button>
       </p>
     </div>

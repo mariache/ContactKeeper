@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ContactContext from "../context/contact/contactContext";
 import ContactItem from "./ContactItem";
 import Spinner from "../pages/Spinner";
+import {ContactLabels} from "./ContactLabels"
 
 const ContactList = () => {
   const contactContext = useContext(ContactContext);
@@ -14,7 +15,7 @@ const ContactList = () => {
   }, []);
 
   if (contacts !== null && contacts.length === 0 && !loading) {
-    return <h4>Please add a contact</h4>;
+    return <h4>{ContactLabels.pleaseAddContact}</h4>;
   }
 
   return (
