@@ -1,14 +1,15 @@
 import React from "react";
+import {PagesLabels} from "./Labels";
 
 const About = () => {
   return (
     <div>
-      <h1>About this App</h1>
+      <h1>{PagesLabels.aboutTheApp}</h1>
       <p className="my-1">
-        This is a Full Stack React App for keeping contacts
+        {PagesLabels.aboutTheAppDescr}
       </p>
       <p className="bg-dark p">
-        <strong>Version: </strong>1.0.0
+        <strong>{PagesLabels.version}: </strong>{PagesLabels.versionNumber}
       </p>
     </div>
   );
