@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import ContactContext from "./../context/contact/contactContext";
-import {ContactLabels} from "./ContactLabels"
+import {ContactLabels} from "./Labels"
 
 const EditContactModal = () => {
   const contactContext = useContext(ContactContext);

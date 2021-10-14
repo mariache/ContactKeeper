@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ContactContext from "../context/contact/contactContext";
 import ContactItem from "./ContactItem";
 import Spinner from "../pages/Spinner";
-import {ContactLabels} from "./ContactLabels"
+import {ContactLabels} from "./Labels"
 
 const ContactList = () => {
   const contactContext = useContext(ContactContext);
