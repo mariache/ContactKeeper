@@ -1,4 +1,5 @@
 import React from "react";
+import {LayoutLabels} from "./Labels";
 
 const Footer = () => (
   <footer
@@ -9,7 +10,7 @@ const Footer = () => (
       padding: "0.7rem 2rem",
     }}
   >
-    <h5>Contact Keeper</h5>
+    <h5>{LayoutLabels.contactKeeper}</h5>
     <p>
       {new Date().toLocaleDateString(undefined, {
         year: "numeric",

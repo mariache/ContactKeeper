@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import AuthContext from "../context/auth/authContext";
 import ContactContext from "../context/contact/contactContext";
+import {LayoutLabels} from "./Labels"
 
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
@@ -18,11 +19,11 @@ const Navbar = ({ title, icon }) => {
 
   const authLinks = (
     <>
-      <li>Hello {user && user.name}</li>
+      <li>{`${LayoutLabels.hello} ${user && user?.name}`}</li>
       <li>
         <a onClick={onLogout} href="#!">
-          <i className="fas fa-sign-out-alt" />{" "}
-          <span className="hide-sm">Logout</span>
+          <i className="fas fa-sign-out-alt" />
+          <span className="hide-sm">{LayoutLabels.logout}</span>
         </a>
       </li>
     </>
@@ -31,10 +32,10 @@ const Navbar = ({ title, icon }) => {
   const guestLinks = (
     <>
       <li>
-        <Link to="/register">Register</Link>
+        <Link to="/register">{LayoutLabels.register}</Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/login">{LayoutLabels.login}</Link>
       </li>
     </>
   );
@@ -61,7 +62,7 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  title: "Contact Keeper",
+  title: LayoutLabels.contactKeeper,
   icon: "fas fa-id-card-alt",
 };
 
