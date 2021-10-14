@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import AlertContext from "./../context/alert/alertContext";
 import AuthContext from "./../context/auth/authContext";
 import { Link } from "react-router-dom";
+import {AuthLabels} from "./Labels";
 
 const Register = (props) => {
   const alertContext = useContext(AlertContext);
@@ -15,11 +16,10 @@ const Register = (props) => {
       props.history.push("/");
     }
 
-    if (error === "User already exists") {
+    if (error === AuthLabels.userAlreadyExists) {
       setAlert(error, "danger");
       clearErrors();
     }
-    // eslint-disable-next-line
   }, [error, isAuthenticated, props.history]);
 
   const [user, setUser] = useState({
@@ -36,9 +36,9 @@ const Register = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (name === "" || email === "" || password === "") {
-      setAlert("Please enter all fields", "danger");
+      setAlert(AuthLabels.pleaseEnterAllFields, "danger");
     } else if (password !== password2) {
-      setAlert("Passwords don't match", "danger");
+      setAlert(AuthLabels.passwordsDontMatchpass, "danger");
     } else {
       register({ name, email, password });
     }
@@ -47,21 +47,21 @@ const Register = (props) => {
   return (
     <div className="form-container">
       <h3 className="title-secondary ">
-        Account{" "}
-        <span className="form-container__title form-title">Register</span>
+        {AuthLabels.account}
+        <span className="form-container__title form-title">{AuthLabels.register}</span>
       </h3>
-      <p className="text-center">Please, fill the form to create an account</p>
+      <p className="text-center">{AuthLabels.pleaseFillFormCreateAccount}</p>
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{AuthLabels.name}</label>
           <input type="text" name="name" value={name} onChange={onChange} />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email </label>
+          <label htmlFor="email">{AuthLabels.email} </label>
           <input type="email" name="email" value={email} onChange={onChange} />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">{AuthLabels.password}</label>
           <input
             type="password"
             name="password"
@@ -70,7 +70,7 @@ const Register = (props) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password2">Confirm password</label>
+          <label htmlFor="password2">{AuthLabels.confirmPassword}</label>
           <input
             type="password"
             name="password2"
@@ -86,7 +86,7 @@ const Register = (props) => {
           }}
         >
           <Link to="/login" className="secondary-color">
-            Login
+            {AuthLabels.login}
           </Link>
         </div>
       </form>
