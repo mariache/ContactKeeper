@@ -1,5 +1,6 @@
 import React, { useContext, useRef, useEffect } from "react";
 import ContactContext from "./../context/contact/contactContext";
+import {ContactLabels} from "./ContactLabels";
 
 const ContactFilter = () => {
   const contactContext = useContext(ContactContext);
@@ -26,7 +27,7 @@ const ContactFilter = () => {
         style={{ marginTop: "0.7rem" }}
         ref={text}
         type="text"
-        placeholder="Filter contacts..."
+        placeholder={ContactLabels.filterContacts}
         onChange={onChange}
       />
     </form>

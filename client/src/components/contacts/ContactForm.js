@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import ContactContext from "./../context/contact/contactContext";
+import {ContactLabels} from "./ContactLabels";
 
 const ContactForm = () => {
   const contactContext = useContext(ContactContext);
@@ -35,7 +36,7 @@ const ContactForm = () => {
       <form onSubmit={onSubmit} className="card" style={{ margin: 0 }}>
         <h3 className="title-secondary">Add contact</h3>
         <label>
-          Name
+          {ContactLabels.name}
           <input
             className="form-add-input"
             type="text"
@@ -45,7 +46,7 @@ const ContactForm = () => {
           />
         </label>
         <label>
-          Email
+          {ContactLabels.email}
           <input
             className="form-add-input"
             type="email"
@@ -55,7 +56,7 @@ const ContactForm = () => {
           />
         </label>
         <label>
-          Phone
+          {ContactLabels.phone}
           <input
             className="form-add-input"
             type="tel"
@@ -64,7 +65,7 @@ const ContactForm = () => {
             onChange={onChange}
           />
         </label>
-        <h5>Contact Type</h5>
+        <h5>{ContactLabels.contactType}</h5>
         <div className="radio-wrapper">
           <div>
             <p>
@@ -77,7 +78,7 @@ const ContactForm = () => {
                   checked={type === "personal"}
                   onChange={onChange}
                 />
-                <span>Personal</span>
+                <span>{ContactLabels.personal}</span>
               </label>
             </p>
             <p>
@@ -90,7 +91,7 @@ const ContactForm = () => {
                   checked={type === "professional"}
                   onChange={onChange}
                 />
-                <span>Professional</span>
+                <span>{ContactLabels.professional}</span>
               </label>
             </p>
           </div>
@@ -105,7 +106,7 @@ const ContactForm = () => {
         {current && (
           <div>
             <button className="btn  btn-block grey" onClick={clearAll}>
-              Clear
+              {ContactLabels.clear}
             </button>
           </div>
         )}
